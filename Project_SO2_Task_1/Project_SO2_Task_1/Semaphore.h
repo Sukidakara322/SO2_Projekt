@@ -1,7 +1,7 @@
 #ifndef SEMAPHORE_H
 #define SEMAPHORE_H
 
-#include <pthread.h>
+#include "CompatPthread.h"
 
 // Simple semaphore structure
 typedef struct {

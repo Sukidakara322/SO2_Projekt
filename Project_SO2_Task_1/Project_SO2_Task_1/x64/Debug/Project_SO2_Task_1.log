@@ -1,2 +1,19 @@
-﻿  Main.cpp
-  Project_SO2_Task_1.vcxproj -> D:\SO2_Projekt\Project_SO2_Task_1\x64\Debug\Project_SO2_Task_1.exe
+﻿  DiningPhilosophers.cpp
+  Main.cpp
+  Semaphore.cpp
+  Generating Code...
+DiningPhilosophers.obj : error LNK2019: unresolved external symbol __imp_pthread_mutex_init referenced in function "void __cdecl initDiningPhilosophers(int)" (?initDiningPhilosophers@@YAXH@Z)
+Semaphore.obj : error LNK2001: unresolved external symbol __imp_pthread_mutex_init
+DiningPhilosophers.obj : error LNK2019: unresolved external symbol __imp_pthread_mutex_destroy referenced in function "void __cdecl cleanupDiningPhilosophers(void)" (?cleanupDiningPhilosophers@@YAXXZ)
+DiningPhilosophers.obj : error LNK2019: unresolved external symbol __imp_pthread_mutex_lock referenced in function "void __cdecl pickup(int)" (?pickup@@YAXH@Z)
+Semaphore.obj : error LNK2001: unresolved external symbol __imp_pthread_mutex_lock
+DiningPhilosophers.obj : error LNK2019: unresolved external symbol __imp_pthread_mutex_unlock referenced in function "void __cdecl pickup(int)" (?pickup@@YAXH@Z)
+Semaphore.obj : error LNK2001: unresolved external symbol __imp_pthread_mutex_unlock
+DiningPhilosophers.obj : error LNK2019: unresolved external symbol __imp_pthread_cond_destroy referenced in function "void __cdecl cleanupDiningPhilosophers(void)" (?cleanupDiningPhilosophers@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp_pthread_create referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp_pthread_join referenced in function main
+Semaphore.obj : error LNK2019: unresolved external symbol __imp_pthread_cond_init referenced in function "void __cdecl initSemaphore(struct Semaphore &,int)" (?initSemaphore@@YAXAEAUSemaphore@@H@Z)
+Semaphore.obj : error LNK2019: unresolved external symbol __imp_pthread_cond_wait referenced in function "void __cdecl waitSemaphore(struct Semaphore &)" (?waitSemaphore@@YAXAEAUSemaphore@@@Z)
+Semaphore.obj : error LNK2019: unresolved external symbol __imp_pthread_cond_signal referenced in function "void __cdecl signalSemaphore(struct Semaphore &)" (?signalSemaphore@@YAXAEAUSemaphore@@@Z)
+D:\pthreads\Pre-built.2\lib\x86\pthreadVC2.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+D:\SO2_Projekt\Project_SO2_Task_1\x64\Debug\Project_SO2_Task_1.exe : fatal error LNK1120: 10 unresolved externals
