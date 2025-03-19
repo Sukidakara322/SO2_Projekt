@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SO2_Projekt\\Project_SO2_Task_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Main.cpp",
+              "RelativeDocumentMoniker": "Project_SO2_Task_1\\Main.cpp",
+              "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Main.cpp",
+              "RelativeToolTip": "Project_SO2_Task_1\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-19T11:03:41.405Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
