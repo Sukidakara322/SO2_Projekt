@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\DiningPhilosophers.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Semaphore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\Semaphore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\DiningPhilosophers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\DiningPhilosophers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Semaphore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\Semaphore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Semaphore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\Semaphore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\DiningPhilosophers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\DiningPhilosophers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|solutionrelative:Project_SO2_Task_1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7FC844F-6188-47C8-8536-8505682FD50C}|Project_SO2_Task_1\\Project_SO2_Task_1.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\CompatPthread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -61,33 +61,33 @@
               "RelativeDocumentMoniker": "Project_SO2_Task_1\\DiningPhilosophers.cpp",
               "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\DiningPhilosophers.cpp",
               "RelativeToolTip": "Project_SO2_Task_1\\DiningPhilosophers.cpp",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAuwHYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAEwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-19T11:28:07.862Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "DiningPhilosophers.h",
               "DocumentMoniker": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\DiningPhilosophers.h",
               "RelativeDocumentMoniker": "Project_SO2_Task_1\\DiningPhilosophers.h",
               "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\DiningPhilosophers.h",
               "RelativeToolTip": "Project_SO2_Task_1\\DiningPhilosophers.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-19T11:25:18.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Semaphore.cpp",
               "DocumentMoniker": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Semaphore.cpp",
               "RelativeDocumentMoniker": "Project_SO2_Task_1\\Semaphore.cpp",
               "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Semaphore.cpp",
               "RelativeToolTip": "Project_SO2_Task_1\\Semaphore.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-19T11:18:13.772Z",
               "EditorCaption": ""
@@ -100,20 +100,20 @@
               "RelativeDocumentMoniker": "Project_SO2_Task_1\\Semaphore.h",
               "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Semaphore.h",
               "RelativeToolTip": "Project_SO2_Task_1\\Semaphore.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-19T11:06:38.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Main.cpp",
               "DocumentMoniker": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Main.cpp",
               "RelativeDocumentMoniker": "Project_SO2_Task_1\\Main.cpp",
               "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_1\\Project_SO2_Task_1\\Main.cpp",
               "RelativeToolTip": "Project_SO2_Task_1\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-19T11:03:41.405Z",
               "EditorCaption": ""

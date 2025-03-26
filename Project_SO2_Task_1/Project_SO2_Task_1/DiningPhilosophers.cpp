@@ -10,11 +10,11 @@
 using namespace std;
 
 static int N = 0;	// Number of philosophers
-static PhilosopherState *stateArray = nullptr;	// Dynamic array of states
+static PhilosopherState *stateArray = nullptr;	// Dynamic array of states per each philosopher
 static Semaphore* semPhilosopher = nullptr;	// Semaphores per philosopher
-static pthread_mutex_t stateMutex;	// Protects stateArray
+static pthread_mutex_t stateMutex;	// Protects stateArray; global mutex
 
-// Helpewr functions
+// Helpewr functions to get index of left/right neighbor
 static inline int left(int i) {
 	return (i + N - 1) % N;
 }
@@ -39,7 +39,7 @@ static void test(int i) {
 
 // Philosopher i tries to pick up chopsticks
 static void pickup(int i) {
-	pthread_mutex_lock(&stateMutex);
+	pthread_mutex_lock(&stateMutex);	// Enter critical section
 
 	stateArray[i] = HUNGRY;
 	print_state(i, "HUNGRY");
@@ -47,13 +47,13 @@ static void pickup(int i) {
 	test(i);	// Possibly move from HUNGRY to EATING
 	pthread_mutex_unlock(&stateMutex);
 
-	// If not EATING yet - block here
+	// If not EATING yet - block here and wait for neighobors
 	waitSemaphore(semPhilosopher[i]);
 }
 
 // Philosopher i puts down chopsticks
 static void putdown(int i) {
-	pthread_mutex_lock(&stateMutex);
+	pthread_mutex_lock(&stateMutex);	// Enter critical section
 
 	stateArray[i] = THINKING;
 	print_state(i, "THINKING");
@@ -62,16 +62,15 @@ static void putdown(int i) {
 	test(left(i));
 	test(right(i));
 
-	pthread_mutex_unlock(&stateMutex);
+	pthread_mutex_unlock(&stateMutex);	// Unblock mutex
 }
 
 void initDiningPhilosophers(int n) {
 	N = n;
-
-	// Alocate arrays
+	// Initialize arrays
 	stateArray = new PhilosopherState[N];
 	semPhilosopher = new Semaphore[N];
-
+	// Initialize global mutex
 	pthread_mutex_init(&stateMutex, nullptr);
 
 	for (int i = 0; i < N; i++) {
