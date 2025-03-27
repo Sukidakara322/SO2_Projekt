@@ -1,77 +1,101 @@
-Projekt 1: Problem Jedzących Filozofów
+# Projekt 1: Problem Jedzących Filozofów
 
-Spis treści:
-1. Opis problemu
-2. Instrukcja uruchomenia
-3. Struktura i omówienie projektu
-4. Wątki i ich reprezentacja
-5. Sekcje krytyczne i rozwiązanie
+## Spis treści
+1. [Opis problemu](#opis-problemu)
+2. [Instrukcja uruchomienia](#instrukcja-uruchomienia)
+3. [Struktura i omówienie projektu](#struktura-i-omówienie-projektu)
+4. [Wątki i ich reprezentacja](#wątki-i-ich-reprezentacja)
+5. [Sekcje krytyczne i rozwiązanie](#sekcje-krytyczne-i-rozwiązanie)
+6. [Autor](#autor)
 
+---
 
-Opis problemu
-Problem jedzących filozofów to klasyczny problem synchronizacji w programowaniu współbieżnym. Mamy N filozofów siedzących przy okrągłym stole, gdzie każdy filozof ma po lewej i prawej stronie pałeczki (lub widelce). Każdy filozof przechodzi cyklicznie przez stany:
+## Opis problemu
 
-Myślenie (THINKING),
-Bycie glodnym (HUNGRY),
-Jedzenie (EATING).
+**Problem jedzących filozofów** to klasyczny problem synchronizacji w programowaniu współbieżnym.
 
-Kluczowe jest takie zsynchronizowanie dostępu do wspólnych zasobów (pałeczek), aby:
-Nigdy nie doszło do trwałego zakleszczenia (deadlock), w którym wszyscy filozofowie czekają na zasoby i żaden nie może jeść
-Każdy filozof miał szansę jeść
+Mamy `N` filozofów siedzących przy okrągłym stole. Każdy z nich ma po lewej i prawej stronie pałeczki (lub widelce). Filozof cyklicznie przechodzi przez trzy stany:
 
-W tym projekcie rozwiązanie tego problemu zostało zrealizowane z użyciem:
+- `THINKING` – myślenie,
+- `HUNGRY` – oczekiwanie na możliwość jedzenia,
+- `EATING` – jedzenie.
 
-Pthreadów do tworzenia i obsługi wątków,
-Własnej implementacji semaforów (opartej na pthread_mutex_t i pthread_cond_t),
-Mechanizmu „testowania” (funkcja test(i)) decydującego, czy filozof może przejść w stan JEDZENIA.
+### Celem rozwiązania jest zapewnienie, że:
+- **nie dochodzi do zakleszczenia** (ang. *deadlock*),
+- **każdy filozof ma szansę jeść** (brak głodzenia – *starvation*).
 
+### W projekcie zastosowano:
+- wątki POSIX (`pthreads`) do realizacji równoległości,
+- **własną implementację semaforów** (na bazie `pthread_mutex_t` i `pthread_cond_t`),
+- funkcję `test(i)`, która decyduje, czy filozof może zacząć jeść.
 
-Instrukcja uruchomenia
-Projekt zostal zrealizowany w za pomocą Visual Studio, dlatego plik wykonywalny tego projektu został też załączony w tym repozytorium.
-W katalogu z plikiem .exe również powinny być umieszczone pliki .dll (pthread).
-Podczas uruchomenia pliku wykonywalnego do argumentów trzeba podać tylko liczbę filozofów
+---
 
+## Instrukcja uruchomienia
 
-Struktura i omówienie projektu
-W repozytorium znajdują się następujące główne pliki:
-
-Semaphore.h / Semaphore.cpp
-Zawierają implementację prostego semafora opartego na pthread_mutex_t i pthread_cond_t
-
-DiningPhilosophers.h / DiningPhilosophers.cpp
-Zawierają kluczowe funkcje realizujące logikę problemu (pickup(), putdown(), test()) oraz tablice z aktualnymi stanami filozofów
-
-main.cpp
-Główny plik z funkcją main(), który tworzy wątki, inicjuje struktury danych i uruchamia program
-
-CompatPthread.h
-Plik pomocniczy, który definiuje _TIMESPEC_DEFINED i dołącza pthread.h, co zapobiega błędom redefinicji timespec w MSVC
+- Projekt został wykonany w **Visual Studio** (Windows).
+- W repozytorium znajduje się gotowy plik `.exe`.
+- W katalogu z plikiem `.exe` należy umieścić wymagane pliki `.dll` biblioteki pthread.
+- Aby uruchomić program, należy podać **liczbę filozofów** jako argument:
 
 
-Wątki i ich reprezentacja
-Wątek główny (main)
-Odpowiada za odczyt liczby filozofów z argumentów wiersza poleceń, zainicjowanie tablic (stanów filozofów, semaforów) i utworzenie N wątków filozofów.
+---
 
-Wątki filozofów (każdy reprezentowany przez pthread_t)
-Każdy wątek filozofa działa w pętli nieskończonej, przechodząc przez stany:
-  Myślenie (THINKING) – symulowane
-  Próba podniesienia pałeczek (pickup(i)) – tu może nastąpić blokada, jeśli sąsiad je
-  Jedzenie (EATING) – ponownie symulowane przez krótki czas uśpienia wątku
-  Odkładanie pałeczek (putdown(i)) – zwalnia pałeczki i potencjalnie umożliwia jedzenie sąsiadom
+## Struktura i omówienie projektu
 
+| Plik | Opis |
+|------|------|
+| `main.cpp` | Główna funkcja `main()`, tworzy wątki i uruchamia logikę programu |
+| `DiningPhilosophers.cpp / .h` | Logika działania filozofów – obsługa stanów, synchronizacja, funkcje `pickup()`, `putdown()` i `test()` |
+| `Semaphore.cpp / .h` | Własna implementacja semafora z użyciem `pthread_mutex_t` i `pthread_cond_t` |
+| `CompatPthread.h` | Plik kompatybilności dla systemu Windows, zabezpiecza przed konfliktem definicji `timespec` |
 
-Sekcje krytyczne i rozwiązanie
+---
 
-Sekcje krytyczne
-Zmiana stanu filozofa (z THINKING na HUNGRY lub EATING, i odwrotnie)
-Sprawdzanie warunku czy sąsiedzi nie jedzą w funkcji test(i)
-Każda z tych operacji jest wykonywana w sekcji krytycznej chronionej globalnym pthread_mutex_t
+## Wątki i ich reprezentacja
 
-Rozwiązanie
-Tablica stanów stateArray[] przechowuje aktualny stan każdego filozofa.
-Semafor prywatny blokuje danego filozofa, gdy nie może jeść (sąsiedzi jedzą).
-pickup(i) ustawia stan filozofa na HUNGRY, wywołuje test(i) i jeśli filozóf nie może jeść, wątek blokuje się na semaforze semPhilosopher[i].
-putdown(i) ustawia stan na THINKING i wywołuje test(left(i)) i test(right(i)), aby umożliwić sąsiadom przejście w stan EATING, jeśli to możliwe.
-Unikanie deadlocka zapewnia się przez to, że każdy filozof przechodzi przez test i może blokować się na semaforze tylko w stanie HUNGRY, a także przez „monitorowe” wywołania test() sąsiadów po zwolnieniu pałeczek.
+### Wątek główny (`main`)
+- Odczytuje liczbę filozofów z argumentów,
+- Inicjalizuje wszystkie struktury danych,
+- Tworzy `N` wątków filozofów.
 
-Wykonawca: Aliaksandr Afanasyeu 273018.
+### Wątki filozofów (`pthread_t`)
+Każdy filozof działa w osobnym wątku i przechodzi w pętli nieskończonej przez stany:
+
+1. `THINKING` – symulowane przez opóźnienie (`sleep`),
+2. `HUNGRY` – próba zdobycia pałeczek (`pickup(i)`),
+3. `EATING` – jedzenie (również opóźnienie),
+4. `putdown(i)` – zwolnienie pałeczek i sprawdzenie, czy sąsiedzi mogą teraz jeść.
+
+---
+
+## Sekcje krytyczne i rozwiązanie
+
+### Sekcje krytyczne
+
+Operacje wykonywane wewnątrz sekcji krytycznych (chronionych przez `stateMutex`):
+
+- Zmiana stanu filozofa (`THINKING`, `HUNGRY`, `EATING`),
+- Sprawdzanie, czy sąsiedzi jedzą (`test(i)`),
+- Budzenie innych filozofów (sygnalizacja semafora).
+
+### Rozwiązanie
+
+- `stateArray[]` – dynamiczna tablica przechowująca stan każdego filozofa.
+- `semPhilosopher[i]` – prywatny semafor każdego filozofa, pozwala na czekanie, gdy nie może on jeść.
+- `pickup(i)`:
+  - Ustawia filozofa jako `HUNGRY`,
+  - Wywołuje `test(i)` – jeśli może jeść, przechodzi do `EATING`; jeśli nie – czeka.
+- `putdown(i)`:
+  - Zmienia stan filozofa na `THINKING`,
+  - Wywołuje `test()` dla lewego i prawego sąsiada – jeśli któryś z nich był głodny i teraz może jeść, zostaje odblokowany.
+- Unikanie zakleszczenia i głodzenia jest osiągnięte dzięki kolejności operacji oraz monitorowemu zarządzaniu semaforami i stanami.
+
+---
+
+## Autor
+
+**Aliaksandr Afanasyeu**  
+Numer indeksu: **273018**
+
+---
