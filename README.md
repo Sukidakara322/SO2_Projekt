@@ -192,11 +192,14 @@ Chronione przez własną implementację `SpinLock`:
 - `dispatcher` działa w tle, obsługując wiadomości, które pojawiają się w `msg_queue`.
 
 ---
+
 ## Autorzy:
 
 **Aliaksandr Afanasyeu**  
-Numer indeksu: **273018**,
-**Dzmitry Kuzma**
+Numer indeksu: **273018**
+
+**Dzmitry Kuzma**  
 Numer indeksu: **276246**
 
 ---
+
