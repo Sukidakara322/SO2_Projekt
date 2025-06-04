@@ -197,6 +197,9 @@ Chronione przez własną implementację `SpinLock`:
 **Aliaksandr Afanasyeu**  
 Numer indeksu: **273018**
 
+---
+
 **Dzmitry Kuzma**
 Numer indeksu: **276246**
+
 ---
