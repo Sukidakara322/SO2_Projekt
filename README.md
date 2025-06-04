@@ -99,3 +99,104 @@ Operacje wykonywane wewnątrz sekcji krytycznych (chronionych przez `stateMutex`
 Numer indeksu: **273018**
 
 ---
+---
+
+## 📡 Projekt 2: Wielowątkowy Serwer Czatu
+
+### Spis treści
+1. [Opis problemu](#opis-problemu-1)
+2. [Instrukcja uruchomienia](#instrukcja-uruchomienia-1)
+3. [Struktura i omówienie projektu](#struktura-i-omówienie-projektu-1)
+4. [Wątki i ich reprezentacja](#wątki-i-ich-reprezentacja-1)
+5. [Sekcje krytyczne i rozwiązanie](#sekcje-krytyczne-i-rozwiązanie-1)
+
+---
+
+## Opis problemu
+
+Projekt polega na stworzeniu serwera (TCP), który obsługuje **czat wielu klientów** w czasie rzeczywistym. Każdy klient po połączeniu się:
+
+- podaje swój **nickname**,
+- może wysyłać wiadomości, które trafiają do wszystkich innych klientów.
+
+Serwer działa **wielowątkowo** – każdy klient obsługiwany jest w oddzielnym wątku, a przekazywanie wiadomości odbywa się przez wspólną kolejkę z synchronizacją.
+
+---
+
+## Instrukcja uruchomienia
+
+1. Zbuduj projekt w Visual Studio.
+
+2. Uruchom serwer z podaniem portu jako argument:
+   ```bash
+   Project_SO2_Task_2.exe 9000
+   ```
+
+3. Połącz się z drugiego terminala lub narzędzia (np. PuTTY):
+
+   - **Hostname**: `127.0.0.1`
+   - **Port**: `9000`
+   - **Connection type**: `Raw`
+
+   Można też użyć `ncat`:
+   ```bash
+   ncat 127.0.0.1 9000
+   ```
+
+4. Aby się **rozłączyć po stronie klienta**, wpisz:
+   ```bash
+   /quit
+   ```
+
+5. Aby **zatrzymać serwer i rozłączyć wszystkich klientów**, użyj:
+   ```
+   CTRL + C
+   ```
+
+---
+
+## Struktura i omówienie projektu
+
+| Plik | Opis |
+|------|------|
+| `main.cpp`           | Odczyt portu, inicjalizacja Winsock, uruchomienie serwera |
+| `server.cpp / .h`    | Właściwa logika serwera: połączenia, wątki klientów, dispatcher |
+| `message.h`          | Struktura `Message` zawierająca nadawcę i treść |
+| `spinlock.h`         | Prosty `SpinLock` oparty na `std::atomic_flag` (synchronizacja) |
+
+---
+
+## Wątki i ich reprezentacja
+
+| Wątek | Rola |
+|-------|------|
+| `main`              | Uruchamia serwer i nasłuchuje połączeń |
+| `client_thread()`   | Obsługuje jednego klienta: nickname, odbiór wiadomości, `/quit` |
+| `dispatcher()`      | Centralny wątek – przekazuje wiadomości z kolejki do wszystkich innych klientów |
+
+---
+
+## Sekcje krytyczne i rozwiązanie
+
+### Sekcje krytyczne
+
+Chronione przez własną implementację `SpinLock`:
+
+- `clients`: lista połączeń z klientami,
+- `nicks`: mapa SOCKET → nickname,
+- `msg_queue`: wspólna kolejka wiadomości.
+
+### Rozwiązanie
+
+- `SpinLock` używa `std::atomic_flag` do stworzenia lekkiego mechanizmu synchronizacji bez użycia `mutex`.
+- `dispatcher` działa w tle, obsługując wiadomości, które pojawiają się w `msg_queue`.
+
+---
+## Autorzy:
+
+**Aliaksandr Afanasyeu**  
+Numer indeksu: **273018**
+
+**Dzmitry Kuzma**
+Numer indeksu: **276246**
+---
