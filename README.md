@@ -125,7 +125,7 @@ Serwer działa **wielowątkowo** – każdy klient obsługiwany jest w oddzielny
 
 ## Instrukcja uruchomienia
 
-1. Zbuduj projekt w Visual Studio.
+1. Zbuduj projekt
 
 2. Uruchom serwer z podaniem portu jako argument:
    ```bash
