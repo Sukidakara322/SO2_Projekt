@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{A280480D-7CCB-4D3A-AFDF-4B3CAC7AF0EF}|Project_SO2_Task_2\\Project_SO2_Task_2.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A280480D-7CCB-4D3A-AFDF-4B3CAC7AF0EF}|Project_SO2_Task_2\\Project_SO2_Task_2.vcxproj|solutionrelative:Project_SO2_Task_2\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A280480D-7CCB-4D3A-AFDF-4B3CAC7AF0EF}|Project_SO2_Task_2\\Project_SO2_Task_2.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Spinlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A280480D-7CCB-4D3A-AFDF-4B3CAC7AF0EF}|Project_SO2_Task_2\\Project_SO2_Task_2.vcxproj|solutionrelative:Project_SO2_Task_2\\Spinlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A280480D-7CCB-4D3A-AFDF-4B3CAC7AF0EF}|Project_SO2_Task_2\\Project_SO2_Task_2.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Message.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A280480D-7CCB-4D3A-AFDF-4B3CAC7AF0EF}|Project_SO2_Task_2\\Project_SO2_Task_2.vcxproj|solutionrelative:Project_SO2_Task_2\\Message.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A280480D-7CCB-4D3A-AFDF-4B3CAC7AF0EF}|Project_SO2_Task_2\\Project_SO2_Task_2.vcxproj|D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A280480D-7CCB-4D3A-AFDF-4B3CAC7AF0EF}|Project_SO2_Task_2\\Project_SO2_Task_2.vcxproj|solutionrelative:Project_SO2_Task_2\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +26,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Server.cpp",
+              "DocumentMoniker": "D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Server.cpp",
+              "RelativeDocumentMoniker": "Project_SO2_Task_2\\Server.cpp",
+              "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Server.cpp",
+              "RelativeToolTip": "Project_SO2_Task_2\\Server.cpp",
+              "ViewState": "AgIAALUAAAAAAAAAAAAAANwAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-04T12:56:30.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Message.h",
+              "DocumentMoniker": "D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Message.h",
+              "RelativeDocumentMoniker": "Project_SO2_Task_2\\Message.h",
+              "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Message.h",
+              "RelativeToolTip": "Project_SO2_Task_2\\Message.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-04T12:56:14.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Spinlock.h",
+              "DocumentMoniker": "D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Spinlock.h",
+              "RelativeDocumentMoniker": "Project_SO2_Task_2\\Spinlock.h",
+              "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Spinlock.h",
+              "RelativeToolTip": "Project_SO2_Task_2\\Spinlock.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-04T12:56:03.472Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -28,7 +79,7 @@
               "RelativeDocumentMoniker": "Project_SO2_Task_2\\Main.cpp",
               "ToolTip": "D:\\SO2_Projekt\\Project_SO2_Task_2\\Project_SO2_Task_2\\Main.cpp",
               "RelativeToolTip": "Project_SO2_Task_2\\Main.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC4AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-04T12:29:57.447Z",
               "EditorCaption": ""

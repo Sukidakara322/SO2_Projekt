@@ -1,6 +1,7 @@
 ﻿  Main.cpp
+  Server.cpp
   Generating code
   Previous IPDB not found, fall back to full compilation.
-  All 321 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 550 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Project_SO2_Task_2.vcxproj -> D:\SO2_Projekt\Project_SO2_Task_2\x64\Release\Project_SO2_Task_2.exe
